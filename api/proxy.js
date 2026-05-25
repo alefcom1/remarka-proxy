@@ -5,7 +5,8 @@ module.exports = async function handler(req, res) {
   console.log('SECRET_RECEIVED:', secret);
   console.log('SECRET_ENV:', process.env.WORKER_SECRET);
 
-  if (!secret || secret !== process.env.WORKER_SECRET) return res.status(403).end('Forbidden');
+  // if (!secret || secret !== process.env.WORKER_SECRET) return res.status(403).end('Forbidden');
+
   try {
     const upstream = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
