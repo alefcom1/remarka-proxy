@@ -3,5 +3,6 @@
     "api/proxy.js": {
       "maxDuration": 60
     }
-  }
+  },
+  "regions": ["cdg1"]
 }
